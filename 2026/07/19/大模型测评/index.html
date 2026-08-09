@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">大模型测评 | kang0234的空间</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <!-- 系统字体替代 Google Fonts，避免国内访问不稳 -->
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <!-- kang0234 二次元深度美化样式 -->
+  <link rel="stylesheet" href="/css/kang-custom.css" media="all">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "爻光Kang0234的空间";
+  mashiro_option.author_name = "Kang0234的空间";
+  mashiro_option.site_url = "/";
+  mashiro_option.v_appId = "";
+  mashiro_option.v_appKey = "";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "/images/pink-bg.png,/images/pink-bg.png,/images/pink-bg.png".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#ff7ab6}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#ff7ab6}::-webkit-scrollbar-thumb{background:#ff7ab6}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#ff7ab6}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#ff7ab6}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <!-- 移动端毛玻璃导航条（三条杠 + 头像 + 搜索，不固定） -->
+<div class="mobile-navbar">
+  <button class="mob-menu-btn" id="mobile-menu-btn" aria-label="菜单">
+    <span class="mob-line"></span><span class="mob-line"></span><span class="mob-line"></span>
+  </button>
+  <a class="mob-logo" href="/" aria-label="首页">
+    <img src="/images/yaoguang-logo.png" alt="爻光">
+  </a>
+</div>
+
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="/">
+          <img src="/image/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p class="hi-desc">记录生活 · 分享热爱 · 二次元角落</p>
+        <div class="hi-links">
+          <a href="https://github.com/kang0234" target="_blank" rel="noopener" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="mailto:18980762558@163.com" title="邮箱"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+        </div>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="/images/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/kang0234" target="_blank" class="social-github" title="github">
+                    <img src="/img/social/github.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="mailto:18980762558@163.com" target="_blank" class="social-github" title="email">
+                    <img src="/img/social/email.svg">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="/images/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <img class="yaoguang-logo" src="/images/yaoguang-logo.png" alt="爻光">
+            <span class="shironeko">Kang0234的空间</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E7%94%9F%E6%B4%BB/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E9%9A%8F%E7%AC%94/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随笔
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/tags/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-tags faa-shake" aria-hidden="true"></i>
+                    标签
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/categories/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-folder-open faa-shake" aria-hidden="true"></i>
+                    分类
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/album/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-image faa-tada" aria-hidden="true"></i>
+                    图墙
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/about/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!-- tocbot.css 已本地化移除（避免国内访问不稳） -->
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(/images/cdn/2a36a9c576a0.jpg);" src="/images/other/loader.svg" data-src="/images/cdn/2a36a9c576a0.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      大模型测评</h1>
+      <p class="entry-census">
+        <span>
+          <a href="/">
+            <img src="/image/avatar.jpg" class="avatar-img">
+          </a>
+        </span>
+        <span>
+          <a href="/">kang0234</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2026-7-19<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>一、编程能力横向对比</p>
+<ol>
+<li>豆包<br>优势<br>前端、HTML&#x2F;CSS&#x2F;JS、Hexo 静态页面、Python 简易脚本生成效果优秀，代码简洁无冗余，复制即可运行<br>适配国内开发环境，中文注释清晰，擅长网页排错、简易爬虫、学生作业代码<br>新手友好，自动简化复杂逻辑，不会过度封装<br>不足<br>复杂算法、大型多模块项目、底层系统开发表现一般<br>高难度业务代码容易省略边界条件，深层 BUG 定位精度一般</li>
+<li>通义千问<br>优势<br>综合能力均衡，Java、Go、SQL、数据分析、算法刷题都能稳定输出<br>代码分层规范，多轮迭代上下文记忆稳定，适配中小企业常规后端开发<br>开源模型丰富，支持本地私有化部署<br>不足<br>简单小脚本容易过度封装，代码篇幅偏长，阅读成本高</li>
+<li>智谱清言<br>优势<br>国产逻辑严谨度第一梯队，幻觉极少，擅长 BUG 定位、项目重构、数学算法推导<br>支持多文件联动分析，适合专业开发者调试复杂业务、科学计算代码<br>不足<br>简单轻量代码输出冗余，日常快速写页面性价比低</li>
+<li>DeepSeek<br>优势<br>代码专项优化，竞赛算法、深度学习、全栈开发表现亮眼<br>兼容 OpenAI 调用格式，迁移改造成本低，批量生成代码效率高<br>国内直连无网络封锁，开源权重可本地部署<br>不足<br>超大型完整项目架构设计弱于 GPT、Claude，少量场景存在细微逻辑漏洞</li>
+<li>GPT（GPT-4o）<br>优势<br>通用编程综合实力顶尖，全语言、底层源码、自动化 Agent、完整项目搭建全能<br>第三方库、各类开发框架适配全覆盖，跨平台、跨语言开发无阻碍<br>不足<br>国内无法直连，需要中转服务，中文工程代码存在轻微生硬表达<br>API 调用成本高，大规模批量使用开销大</li>
+<li>Claude<br>优势<br>超长上下文标杆，百万 Token 可一次性读取整套仓库代码，批量重构全项目文件<br>代码可读性高，长文档 + 混合代码联合分析能力突出，幻觉极低<br>不足<br>轻量实时交互响应慢，国内无官方节点，访问不稳定<br>图像多模态辅助编程能力弱于 GPT<br>二、响应速度实测对比<br>整体速度由快到慢排序：豆包 &gt; DeepSeek Flash &gt; 通义千问 &gt; 智谱清言 &gt; GPT-4o &gt; Claude Opus<br>豆包<br>毫秒级首字输出，简单代码、问答几乎秒出；国内节点全覆盖，高频连续对话无明显延迟。<br>DeepSeek Flash<br>轻量推理速度极快，API 高并发批量生成流畅，缓存机制缩短重复请求耗时。<br>通义千问<br>速度均衡稳定，日常开发无卡顿，仅上万行超长代码生成存在小幅延迟。<br>智谱清言<br>中等速度，高精度逻辑推理会增加计算耗时，复杂算法等待时间更长。<br>GPT-4o<br>原生推理速度优秀，但国内中转存在固定网络延迟，高峰期容易排队。<br>Claude Opus<br>推理耗时最长，读取整套大型项目代码时等待时间显著高于其余模型。<br>三、运行稳定性评测</li>
+<li>豆包<br>优点：国内服务器覆盖完善，免费 &#x2F; 付费对话极少断连、乱码、内容截断<br>缺点：上万字超长文本偶尔末尾截断，工作日高峰存在少量限流</li>
+<li>通义千问<br>优点：企业级成熟服务，多轮长上下文记忆稳定，批量生成、项目续写逻辑不乱<br>缺点：超高并发批量 API 调用会触发短时流量限制</li>
+<li>智谱清言<br>优点：输出逻辑一致性强，复杂任务几乎无幻觉、输出无无效乱码<br>缺点：工作日白天 API 并发限制严格，大批量调用易返回限流报错</li>
+<li>DeepSeek<br>优点：API 接口兼容稳定，OpenAI SDK 无缝接入，缓存减轻重复推理压力<br>缺点：免费额度有限，无缓存长文本重复请求会出现排队延迟</li>
+<li>GPT<br>优点：模型原生输出稳定，代码逻辑统一<br>缺点：国内直连阻断，中转服务商波动大，频繁超时、502 报错；IP 风控严格，批量调用易封禁密钥</li>
+<li>Claude<br>优点：模型本体无乱码、低幻觉，长文本输出完整不截断<br>缺点：无国内官方节点，全部依赖代理，超时、请求失败、会话断开高频出现<br>四、API 调用价格（2026 最新）<br>单位：元 &#x2F; 百万 Token，输入、输出分开计费<br>国产直连模型（无需翻墙）<br>豆包 Pro<br>轻量版：输入 0.2 元，输出 2 元<br>代码专项版：输入 3.2 元，输出 16 元<br>适用：学生、个人高频轻量调用、静态网站开发，综合性价比最高<br>DeepSeek V4 Flash<br>缓存命中输入 0.1 元，未命中输入 1 元，输出 2 元<br>高阶 Pro 版：输入 12 元，输出 24 元<br>适用：批量代码生成、自建 AI 工具、预算有限开发者<br>通义千问 Max<br>输入 18 元，输出 54 元<br>适用：中小企业常规业务、数据分析<br>智谱清言 GLM 旗舰<br>输入 70 元，输出 220 元<br>适用：高精度代码调试、科研算法、严谨专业场景<br>海外模型（需中转，额外增加网络成本）<br>GPT-4o<br>Mini 轻量：输入 1.1 元，输出 4.3 元<br>旗舰 4o：输入 18 元，输出 72 元<br>短板：长期大规模调用总成本偏高<br>Claude<br>Sonnet 中端：输入 21 元，输出 108 元<br>Opus 旗舰：输入 108 元，输出 540 元<br>适用：仅百万行完整仓库一次性重构场景<br>价格从低到高排序<br>豆包轻量 &lt; DeepSeek Flash &lt; GPT Mini &lt; 通义千问 &lt; 智谱清言 &lt; GPT-4o &lt; Claude Sonnet &lt; Claude Opus<br>五、综合对比表格<br>表格<br>模型	编程能力	响应速度	国内稳定性	API 成本	核心定位<br>豆包	前端轻量化优秀，大型工程偏弱	最快	极高	最低	学生、个人网页开发、低成本高频调用<br>DeepSeek	代码专项能力强，全栈均衡	极快	高	极低	批量生成代码、自研 AI 接口工具<br>通义千问	综合均衡，适配企业开发	中等偏快	高	中等	中小企业后端、数据分析业务<br>智谱清言	代码纠错严谨，简易代码冗余	中等	中等	偏高	专业代码调试、算法科研场景<br>GPT-4o	通用编程天花板，全场景适配	中等（中转延迟）	极低	高	大型项目、底层开发、自动化 Agent<br>Claude	超长代码重构顶尖，多模态薄弱	最慢	极低	极高	整套代码仓库批量重构、超长文档分析<br>六、分场景选型建议<br>学生、个人、Hexo 博客开发、低成本高频使用 → 豆包<br>批量生成代码、自建 AI 工具、预算有限 → DeepSeek<br>中小企业后端、常规数据分析项目 → 通义千问<br>专业代码深度排错、复杂算法、科研计算 → 智谱清言<br>无网络限制、大型全栈项目、底层系统开发 → GPT-4o<br>一次性读取完整代码仓库、百万字长文档批量重构 → Claude Sonnet&#x2F;Opus</li>
+</ol>
+
+        </div>
+        <!-- .entry-content -->
+        
+        <div class="share-mobile-wrap">
+          <button type="button" class="share-mobile-btn" id="shareMobileBtn"><i class="fa fa-share-alt" aria-hidden="true"></i> 分享</button>
+          <div class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        </div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2026/07/25/%E4%B8%89%E9%98%B6%E9%AD%94%E6%96%B9%E6%94%BB%E7%95%A5/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="/images/other/loader.svg" data-src="/images/cdn/d6e6da40d4e8.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="/images/cdn/d6e6da40d4e8.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                三阶魔方攻略：从手残到复原的血泪史</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2026/07/19/%E4%B8%83%E4%B8%AD%E8%82%B2%E6%89%8D%E5%AD%A6%E6%A0%A1%EF%BC%88%E7%99%BD%E9%B9%AD%E6%B9%BE%E6%A0%A1%E5%8C%BA%EF%BC%89%E6%88%91%E6%9D%A5%E5%95%A6/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="/images/other/loader.svg" data-src="/images/cdn/120485c6b1b0.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="/images/cdn/120485c6b1b0.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                七中育才学校（白鹭湾校区）我来啦</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<!-- kang0234 自建评论系统（Cloudflare Workers + D1 + Turnstile） -->
+<div id="kang-comments" class="kang-comments" data-path="/2026/07/19/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%B5%8B%E8%AF%84/"></div>
+<script type="text/javascript" src="/js/kang-comments.js" defer></script>
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="/" class="profile gravatar"><img src="/image/avatar.jpg" itemprop="image" alt="kang0234" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="/" itemprop="url" rel="author">kang0234</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2026 kang0234<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="/images/other/wordpress-rotating-ball-o.svg">
+        <img src="/images/other/disqus-preloader.svg">
+      </div>
+      <p class="site-stat">
+        <span><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> 次访问</span>
+        <span class="stat-sep">·</span>
+        <span><i class="fa fa-users"></i> <span id="busuanzi_value_site_uv"></span> 位访客</span>
+      </p>
+      <p class="site-thanks">
+        特别鸣谢
+        <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">Cloudflare</a>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+      <p class="site-copyright" style="color: #999; margin-top: 14px;">&copy; 2025 - 2026 kang0234 · 樱花飘落，愿你所念皆星河</p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="/js/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器（国内可达） -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- kang0234 樱花飘落 & 二次元深度美化 JS -->
+<script type="text/javascript" src="/js/kang-effects.js" defer></script>
+<!-- 自建评论系统 JS（仅评论页面需要，comment.ejs 已按需引入） -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "","name":"","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "","name":"","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="/image/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Kang0234的空间</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/kang0234" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="mailto:18980762558@163.com" class="fa fa-envelope" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E7%94%9F%E6%B4%BB/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E9%9A%8F%E7%AC%94/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随笔
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/tags/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-tags faa-shake" aria-hidden="true"></i>
+            标签
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/categories/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-folder-open faa-shake" aria-hidden="true"></i>
+            分类
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/album/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-image faa-tada" aria-hidden="true"></i>
+            图墙
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/about/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy; Kang0234</p>
+</div>
+<button onclick="location.href='/'" class="mobile-cd-top" id="moblieGoTop" title="回到首页" style="display: none;">首页</button>
+  <!-- APlayer & Meting 本地化（避免 jsdelivr 国内访问不稳） -->
+<link rel="stylesheet" href="/css/APlayer.min.css">
+<script src="/js/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="/js/Meting.min.js"></script>
+<style>
+  /* ===== 歌词栏优化（贴纸风毛玻璃歌词面板） ===== */
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: block !important;
+    height: 96px;
+    background: rgba(255, 244, 250, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 2.5px solid var(--ink, #2b1e33);
+    border-radius: 14px;
+    box-shadow: 4px 4px 0 rgba(43, 30, 51, 0.18);
+    padding: 10px 6px;
+    margin: 0 8px 8px;
+    overflow: hidden;
+  }
+  .aplayer .aplayer-lrc p {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px !important;
+    color: #6b5a6e;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current {
+    color: #ff2e93;
+    font-size: 16px;
+    text-shadow: 0 1px 4px rgba(255, 46, 147, 0.25);
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+    display: none !important;
+  }
+  /* 歌词滚动动画（APlayer 自带 translateY，这里做平滑） */
+  .aplayer .aplayer-lrc .aplayer-lrc-contents {
+    transition: transform 0.6s ease;
+  }
+  /* 音乐卡片毛玻璃底 */
+  .aplayer.aplayer-fixed {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2.5px solid var(--ink, #2b1e33);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 rgba(43, 30, 51, 0.16) !important;
+  }
+  .aplayer .aplayer-info {
+    border-bottom: 1.5px dashed rgba(43, 30, 51, 0.15) !important;
+  }
+  .aplayer .aplayer-list {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 12px;
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.5"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  // 歌词栏：点播放器切换歌词显示
+  $(function () {
+    $('body').on('click', '.aplayer', function () {
+      $('.aplayer-lrc').toggleClass('aplayer-lrc-hide');
+    });
+  });
+
+</script>
+</body>
+</html>

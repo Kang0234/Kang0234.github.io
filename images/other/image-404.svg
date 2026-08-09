@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
+  <rect width="400" height="225" fill="#ffe4ef"/>
+  <circle cx="200" cy="95" r="52" fill="#ffb6d5"/>
+  <path d="M130 175 Q200 150 270 175 L270 225 L130 225 Z" fill="#ffb6d5" opacity="0.8"/>
+  <text x="200" y="60" font-size="20" fill="#ff5ca8" text-anchor="middle" font-family="sans-serif">图片走丢啦~</text>
+  <circle cx="176" cy="88" r="7" fill="#fff"/><circle cx="224" cy="88" r="7" fill="#fff"/>
+  <circle cx="178" cy="90" r="3.5" fill="#555"/><circle cx="222" cy="90" r="3.5" fill="#555"/>
+  <path d="M188 108 Q200 118 212 108" stroke="#ff5ca8" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>
